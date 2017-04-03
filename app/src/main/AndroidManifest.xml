@@ -4,8 +4,9 @@
 
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -25,6 +26,10 @@
 
         <service
             android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".BindMusicService"
             android:enabled="true"
             android:exported="true"></service>
     </application>
