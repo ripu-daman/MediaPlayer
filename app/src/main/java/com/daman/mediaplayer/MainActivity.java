@@ -113,12 +113,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+       int songIndex=position;
         Log.i("test","You selected: "+filelist.get(position));
         Intent intent=new Intent(MainActivity.this,PlayerActivity.class);
         intent.putExtra("keySong",filelist.get(position).getName());
 
         intent.putExtra("songpath",filelist.get(position).getPath());
         //intent.putExtra("songImage",fm.getImage());
+        intent.putExtra("songIndex", songIndex);
+        intent.putExtra("key",filelist);
         startActivity(intent);
     }
 }

@@ -1,10 +1,12 @@
 package com.daman.mediaplayer;
 
+import java.io.Serializable;
+
 /**
  * Created by Daman on 29-03-2017.
  */
 
-public class FileModel {
+public class FileModel implements Serializable {
     int image;
     String name;
     String path;
