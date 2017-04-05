@@ -23,10 +23,11 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
+        android:padding="10dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="15dp"
 
         android:layout_marginTop="8dp"
         android:text="TextView"
@@ -37,5 +38,5 @@
         app:layout_constraintLeft_toRightOf="@+id/imageView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.041" />
 </android.support.constraint.ConstraintLayout>

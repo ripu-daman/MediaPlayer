@@ -1,5 +1,6 @@
 package com.daman.mediaplayer;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -21,16 +22,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     final String MEDIA_PATH = Environment.getExternalStorageDirectory().getPath() + "/";
     private String mp3Pattern = ".mp3";
     public String path;
+    //ProgressDialog progress;
     void init(){
         listView= (ListView) findViewById(R.id.listview);
         filelist= new ArrayList<>();
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        progress=new ProgressDialog(this);
+//        progress.setTitle("Loading Songs");
+//        progress.setMessage("Please Wait");
+//        progress.setCancelable(false);
+//        progress.show();
         init();
+
         //readFile();
         getPlayList();
     }
@@ -82,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
       fileAdapter = new FileAdapter(this,R.layout.file_explorer,filelist);
       listView.setAdapter(fileAdapter);
       listView.setOnItemClickListener(this);
+     // progress.dismiss();
   }
     private void scanDirectory(File directory) {
         if (directory != null) {
